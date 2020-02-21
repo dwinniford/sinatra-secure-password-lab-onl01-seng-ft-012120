@@ -73,6 +73,7 @@ class ApplicationController < Sinatra::Base
     def deposit(amount)
       user = User.find(session[:user_id])
       user.balance += amount 
+      user.save
     end 
       
   end
