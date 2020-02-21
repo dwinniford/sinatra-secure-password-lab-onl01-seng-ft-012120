@@ -33,7 +33,7 @@ class ApplicationController < Sinatra::Base
   end
   
   patch '/account/deposit' do 
-    @user = User.find(session[:user_id])
+    
 
 
   get "/login" do
@@ -67,6 +67,12 @@ class ApplicationController < Sinatra::Base
     def current_user
       User.find(session[:user_id])
     end
+    
+    def deposit
+      user = User.find(session[:user_id])
+      user.account += session[:deposit].to_i 
+    end 
+      
   end
 
 end
