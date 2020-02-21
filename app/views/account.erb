@@ -8,5 +8,11 @@
   <input type="integer" name="deposit">
   <button type="submit">Make Deposit</button>
 </form>
+<form method="post" action='/account/withdraw'>
+  <input type="hidden" name="_method" value="PATCH">
+  <label for="withdraw">Withdraw</label>
+  <input type="integer" name="withdraw">
+  <button type="submit">Make withdrawal</button>
+</form>
 
 <p><a href="/logout">Log Out</a></p>
