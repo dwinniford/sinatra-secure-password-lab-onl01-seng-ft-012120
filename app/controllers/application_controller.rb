@@ -33,7 +33,7 @@ class ApplicationController < Sinatra::Base
   end
   
   patch '/account/deposit' do 
-    deposit(params[:deposit]) 
+    deposit(params[:deposit].to_i) 
     redirect '/account'
   end 
 
