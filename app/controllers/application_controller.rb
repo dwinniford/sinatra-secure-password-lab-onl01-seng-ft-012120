@@ -36,6 +36,12 @@ class ApplicationController < Sinatra::Base
     deposit(params[:deposit].to_i) 
     redirect '/account'
   end 
+  
+   patch '/account/withdraw' do 
+     if params[:withdraw].to_i <= User.find(session[:user_id]).balance
+    deposit(params[:deposit].to_i) 
+    redirect '/account'
+  end 
 
 
   get "/login" do
