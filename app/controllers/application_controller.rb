@@ -31,6 +31,9 @@ class ApplicationController < Sinatra::Base
     @user = User.find(session[:user_id])
     erb :account
   end
+  
+  patch '/account/deposit' do 
+    @user = User.find(session[:user_id])
 
 
   get "/login" do
