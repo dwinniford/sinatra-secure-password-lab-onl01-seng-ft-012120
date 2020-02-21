@@ -46,7 +46,7 @@ class ApplicationController < Sinatra::Base
     end 
   end 
   
-  get '/transaction_error'
+  get '/transaction_error' do 
     erb :transaction_error
   end 
 
