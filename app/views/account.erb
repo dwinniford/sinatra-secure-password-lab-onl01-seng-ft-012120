@@ -3,8 +3,8 @@
 <p>We are currently working on your account.</p>
 <p>Your Account Balance: $<%=current_user.balance %></p>
 <form method="post" action='/account/deposit'>
+  <input type="hidden" name="_method" value="PATCH">
   <label for="deposit">Deposit</label>
-  <input type="hidden" 
   <input type="integer" name="deposit">
   <button type="submit">Make Deposit</button>
 </form>
