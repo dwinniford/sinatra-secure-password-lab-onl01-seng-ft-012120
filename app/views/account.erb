@@ -2,5 +2,11 @@
 
 <p>We are currently working on your account.</p>
 <p>Your Account Balance: $<%=current_user.balance %></p>
+<form method="post" action='/account/deposit'>
+  <label for="deposit">Deposit</label>
+  <input type="hidden"
+  <input type="integer" name="deposit">
+  <button type="submit">Make Deposit</button>
+</form>
 
 <p><a href="/logout">Log Out</a></p>
