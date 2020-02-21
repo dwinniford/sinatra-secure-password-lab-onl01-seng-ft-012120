@@ -45,6 +45,10 @@ class ApplicationController < Sinatra::Base
       redirect '/transaction_error'
     end 
   end 
+  
+  get '/transaction_error'
+    erb :transaction_error
+  end 
 
 
   get "/login" do
