@@ -33,7 +33,7 @@ class ApplicationController < Sinatra::Base
   end
   
   patch '/account/deposit' do 
-    deposit 
+    deposit(params[:deposit]) 
     redirect '/account'
   end 
 
@@ -70,9 +70,9 @@ class ApplicationController < Sinatra::Base
       User.find(session[:user_id])
     end
     
-    def deposit
+    def deposit(amount)
       user = User.find(session[:user_id])
-      user.account += session[:deposit] 
+      user.account += amount 
     end 
       
   end
