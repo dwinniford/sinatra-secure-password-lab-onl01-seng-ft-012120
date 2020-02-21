@@ -42,7 +42,8 @@ class ApplicationController < Sinatra::Base
       withdraw(params[:withdraw].to_i) 
       redirect '/account'
     else 
-      
+      redirect '/transaction_error'
+    end 
   end 
 
 
